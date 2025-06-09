@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Reverse Words</title>
+</head>
+<body>
+
+  <h2>Reverse Words in a Sentence</h2>
+
+  <input type="text" id="inputStr" placeholder="Enter a sentence" size="40">
+  <button onclick="reverseWords()">Reverse</button>
+
+  <p><strong>Reversed Sentence:</strong> <span id="outputStr"></span></p>
+
+  <script>
+    function reverseWords() {
+      let str = document.getElementById("inputStr").value;
+      let reversed = str.split(' ').reverse().join(' ');
+      document.getElementById("outputStr").innerText = reversed;
+    }
+  </script>
+
+</body>
+</html>
