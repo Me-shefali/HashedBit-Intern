@@ -8,7 +8,7 @@ function App() {
     fetch('https://my-json-server.typicode.com/FreSauce/json-ipl/data')
       .then((response) => response.json())
       .then((data) => {
-        const sorted = data.sort((a, b) => b.points - a.points);
+        const sorted = data.sort((a, b) => parseFloat(a.NRR) - parseFloat(b.NRR));
         setTeams(sorted);
       })
       .catch((error) => console.error('Error fetching data:', error));
